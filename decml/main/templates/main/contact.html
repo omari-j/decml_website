@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+{% block title %}Contact Us{% endblock %}
+{% block nav %}
+<a class="nav-link" href="{% url 'main:home' %}">Home</a>
+<a class="nav-link" href="{% url 'main:portfolio' %}">Portfolio</a>
+<a class="nav-link active" href="{% url 'main:contact' %}">Contact</a>
+{% endblock %}
+
+{% block page_content %}
+<h1> Contact Form</h1>
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-secondary">Submit</button>
+    </form>
+</div>
+{% endblock %}

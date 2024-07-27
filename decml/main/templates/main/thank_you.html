@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% block title %}Thank You{% endblock %}
+{% block add_meta %}<meta http-equiv="refresh" content="3;url={% url 'main:home' %}">{% endblock %}
+
+{% block nav %}
+<a class="nav-link" href="{% url 'main:home' %}">Home</a>
+<a class="nav-link" href="{% url 'main:portfolio' %}">Portfolio</a>
+<a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
+{% endblock %}
+
+    {% block page_content %}
+    {% load static %}
+    <h1>Thank you for enquiry</h1>
+    <p>We will be in touch within 48 hours</p>
+    {% endblock %}

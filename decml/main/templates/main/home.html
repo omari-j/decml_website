@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+{% block title %}Custom AI solutions for small businesses{% endblock %}
+
+{% block nav %}
+<a class="nav-link active" href="{% url 'main:home' %}">Home</a>
+<a class="nav-link" href="{% url 'main:portfolio' %}">Portfolio</a>
+<a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
+{% endblock %}
+
+    {% block page_content %}
+    {% load static %}
+    <img src="{% static 'main/decml_logo.png' %}" alt="decml logo" height="150
+">
+    <h3 class="cover-heading">AI Automation Specialists</h3>
+    <p>decml: empowering small businesses with custom AI solutions to automate tasks and drive growth.</p>
+    <p class="lead"></p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+    </p>
+    {% endblock %}

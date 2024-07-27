@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{% block title %}Portfolio{% endblock %}
+
+{% block nav %}
+<a class="nav-link" href="{% url 'main:home' %}">Home</a>
+<a class="nav-link active" href="{% url 'main:portfolio' %}">Portfolio</a>
+<a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
+{% endblock %}
+
+    {% block page_content %}
+    {% load static %}
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="{% static 'main/chat_app.jpg' %}" class="bd-placeholder-img rounded-circle" style="object-fit: cover;" width="140" height="140" alt="Description of image">
+        <h4 class="fw-normal">Electrician's Chatbot</h4>
+        <p>Chatbot built with RAG pipeline using LangChain, OpenAI, Pinecone and Django</p>
+        <p><a class="btn btn-secondary" href="http://ec2-13-41-230-193.eu-west-2.compute.amazonaws.com:8000">View app »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="{% static 'main/image_classifier_app.jpg' %}" class="bd-placeholder-img rounded-circle" style="object-fit: cover;" width="140" height="140" alt="Description of image">
+        <h4 class="fw-normal">Image Classifier App</h4>
+        <p>Proof of concept image classification streamlit application using Keras neural network model</p>
+        <p><a class="btn btn-secondary" href="http://ec2-13-43-89-20.eu-west-2.compute.amazonaws.com:8501">View app »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       <img src="{% static 'main/soft_dev_salary_app.jpg' %}" class="bd-placeholder-img rounded-circle" style="object-fit: cover;" width="140" height="140" alt="Description of image">
+        <h4 class="fw-normal">Salary Prediction App</h4>
+        <p>Proof of concept machine learning streamlit application trained with scikit-learn</p>
+        <p><a class="btn btn-secondary" href="http://ec2-13-42-15-185.eu-west-2.compute.amazonaws.com:8501">View app »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+    {% endblock %}
