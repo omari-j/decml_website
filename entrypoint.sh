@@ -1,5 +1,5 @@
 # Fetch secrets from AWS Secrets Manager
-SECRET_JSON=$(aws secretsmanager get-secret-value --secret-id decml-website-secrets --region eu-west-2 -query SecretString --output text)
+SECRET_JSON=$(aws secretsmanager get-secret-value --secret-id decml-website-secrets --region eu-west-2 --query SecretString --output text)
 
 # Debugging: Print fetched secrets
 echo "Fetched secrets: $SECRET_JSON"
