@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Install AWS CLI and jq
 RUN pip install awscli
-RUN apt-get update && apt-get install - jq
+RUN apt-get update && apt-get install -y jq
 
 # Copy the current directory contents into a the container at /app
 COPY . /app/
